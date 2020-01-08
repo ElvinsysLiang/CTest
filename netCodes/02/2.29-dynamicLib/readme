@@ -1,0 +1,11 @@
+In this folder, there some codes about create dynamic lib
+
+First you must to put the .o become .so, use this instruct:
+
+gcc -shared -fPIC myObj.o -o libMyDynamicLib.so 
+
+after build the libMyDynamicLib, cp this file to /user/lib, or use -L./
+
+To use the Dynamic lib, run instruct:
+
+gcc test.c -lMyDynamicLib -L./ -o test
